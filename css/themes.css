@@ -44,7 +44,8 @@ body {
   color: var(--text-color);
 }
 
-.title {
+.title,
+.subtitle {
   transition: color var(--transition-duration);
   color: var(--title-text-color);
 }

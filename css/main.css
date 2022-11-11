@@ -1,3 +1,10 @@
+kbd {
+  background-color: #00000008;
+  border: 1px solid #8080804a;
+  border-radius: 5px;
+  padding: 0 3px;
+}
+
 .devs img {
   border-radius: 13px;
 }

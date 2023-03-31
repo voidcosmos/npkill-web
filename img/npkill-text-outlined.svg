@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="73.741136"
-     inkscape:cy="183.84776"
+     inkscape:cx="163.13964"
+     inkscape:cy="189.90868"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -100,25 +100,32 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 69.61251,120.32935 h 6.520444 v 9.23024 l 9.399603,-9.23024 5.491621,2.07887 -10.098273,9.89504 13.430422,13.31187 h -8.163258 l -10.060115,-9.9585 v 9.9585 H 69.61251 Z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="path4548"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccccccccc" />
       <path
          d="m 96.507228,120.32935 h 6.520442 v 25.28578 h -6.520442 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="path4550"
          inkscape:connector-curvature="0" />
       <path
          d="m 109.4465,120.32935 h 6.52044 v 20.35734 h 11.44889 v 4.92844 H 109.4465 Z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="path4552"
          inkscape:connector-curvature="0" />
       <path
          d="m 131.53133,120.32935 h 6.52044 v 20.35734 h 11.44889 v 4.92844 h -17.96933 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'xos4 Terminess Powerline';-inkscape-font-specification:'xos4 Terminess Powerline Bold';fill:#ce0b10;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="path4554"
          inkscape:connector-curvature="0" />
     </g>
+    <rect
+       style="fill:none;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-opacity:1;stop-color:#000000"
+       id="rect1057"
+       width="173.86905"
+       height="58.661911"
+       x="-5.5918646"
+       y="107.73997" />
   </g>
 </svg>

@@ -9,7 +9,7 @@ kbd {
   border-radius: 13px;
 }
 
-.notification.is-info {
+.notification.is-primary {
   transition: background-color var(--transition-duration);
   background-color: var(--notification-background-color);
 }

@@ -5,6 +5,12 @@ kbd {
   padding: 0 3px;
 }
 
+.title-container{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+}
+
 .devs img {
   border-radius: 13px;
 }

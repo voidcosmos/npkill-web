@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>npkill - main</title>
+    <meta
+      name="keywords"
+      content="node_modules, npm, nodejs, tool, optimization, interactive, javascript, typescript"
+    />
+    <meta
+      name="description"
+      content="List any node_modules 📦 dir in your system and how heavy they are. You can then select which ones you want to erase to free up space 🧹."
+    />
+    <title>NPKILL - Maintain your development workspace clean.</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" type="image/png" href="favicon.png" />
     <link
@@ -66,14 +74,15 @@
             alt="npkill logo"
             class="is-inline-flex"
           />
-          <p class="title is-1">
-            npkill
+
+          <div class="title-container">
+            <span></span>
+            <h1 class="title is-1">npkill</h1>
             <img
-              style="position: absolute; margin-left: 10px"
-              alt="npm version"
+              alt="package version"
               src="https://img.shields.io/npm/v/npkill?label=%20&style=flat-square"
             />
-          </p>
+          </div>
 
           <div class="columns">
             <div class="subtitle column is-half is-offset-one-quarter">
@@ -135,9 +144,13 @@
           </p>
           <p>
             This will start the search
-            <img src="./img/Blocks-loading.svg" style="height: 1.3em" /> and
-            will show the node_modules directories next to their size and the
-            age of the workspace.
+            <img
+              src="./img/Blocks-loading.svg"
+              style="height: 1.3em"
+              alt="loading symbol"
+            />
+            and will show the node_modules directories next to their size and
+            the age of the workspace.
           </p>
         </div>
         <div class="column is-two-fifths">
@@ -473,14 +486,16 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <img class="npkill-title" src="img/npkill-text-outlined.svg" />
+        <img
+          class="npkill-title"
+          src="img/npkill-text-outlined.svg"
+          alt="npkill text logo"
+        />
         <p>
-          <img alt="npm" src="https://img.shields.io/npm/dy/npkill.svg" />
-          <a
-            href="https://www.codacy.com/app/zaldih/npkill?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zaldih/npkill&amp;utm_campaign=Badge_Grade"
-            ><img
-              src="https://api.codacy.com/project/badge/Grade/b8ba5eb6cba4413eb474921dcc460f34"
-          /></a>
+          <img
+            alt="npm year downloads"
+            src="https://img.shields.io/npm/dy/npkill.svg"
+          />
           <a
             href="https://github.com/voidcosmos/npkill#coffee-buy-us-a-coffee"
             target="_black"
@@ -494,7 +509,10 @@
             src="https://img.shields.io/npm/v/npkill.svg"
           />
           <!-- <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/npkill.svg"> -->
-          <img alt="NPM" src="https://img.shields.io/npm/l/npkill.svg" />
+          <img
+            alt="MIT license"
+            src="https://img.shields.io/npm/l/npkill.svg"
+          />
         </p>
 
         <p>Made with <i class="fas fa-heart" style="color: red"></i></p>

@@ -1,0 +1,174 @@
+---
+import BackerCard from "./BarkerCard.astro";
+import LinkButton from "./LinkButton.astro";
+
+interface Backer {
+  name: string;
+  amount: number;
+  imgUrl: string;
+  text?: string;
+}
+const backers: Backer[] = [
+  {
+    name: "Carlos Caballero",
+    amount: 68,
+    imgUrl: "https://images.opencollective.com/carlillo/ab3ae67/avatar.png",
+  },
+  {
+    name: "incognito",
+    amount: 60,
+    imgUrl:
+      "https://opencollective.com/static/images/default-anonymous-logo.svg",
+    text: "Fantastic project. Definitely worth contributing",
+  },
+  {
+    name: "incognito",
+    amount: 20,
+    imgUrl:
+      "https://opencollective.com/static/images/default-anonymous-logo.svg",
+    text: "Pero qué pedazo de programadores, por Dios sant...",
+  },
+  {
+    name: "Joel Di Trapani",
+    amount: 20,
+    imgUrl: "https://images.opencollective.com/joel-di-trapani/avatar.png",
+  },
+  {
+    name: "Guest",
+    amount: 20,
+    imgUrl: "https://opencollective.com/static/images/default-guest-logo.svg",
+  },
+  {
+    name: "Valentin Funk",
+    amount: 10,
+    imgUrl:
+      "https://images.opencollective.com/valentin-funk/6df9d0e/avatar.png",
+  },
+  {
+    name: "Salesforce",
+    amount: 10,
+    imgUrl: "https://images.opencollective.com/salesforce/ca8f997/logo.png",
+  },
+  {
+    name: "Chris Scott",
+    amount: 10,
+    imgUrl: "https://images.opencollective.com/guest-6e17b6f7/avatar.png",
+  },
+  {
+    name: "Hung Vo",
+    amount: 10,
+    imgUrl: "https://images.opencollective.com/hung-vo1/avatar.png",
+  },
+  {
+    name: "Don Morris",
+    amount: 10,
+    imgUrl: "https://images.opencollective.com/don-morris/avatar.png",
+  },
+  {
+    name: "incognito",
+    amount: 5,
+    imgUrl:
+      "https://opencollective.com/static/images/default-anonymous-logo.svg",
+    text: "Happy holidays and thanks for the disk space! 💖",
+  },
+  {
+    name: "Eduard-Cristi",
+    amount: 5,
+    imgUrl:
+      "https://images.opencollective.com/eduard-cristian-bolos/avatar.png",
+  },
+  {
+    name: "Guest",
+    amount: 5,
+    imgUrl: "https://opencollective.com/static/images/default-guest-logo.svg",
+  },
+  {
+    name: "Livre",
+    amount: 5,
+    imgUrl: "https://images.opencollective.com/livre/avatar.png",
+  },
+  {
+    name: "CloudAnswers",
+    amount: 5,
+    imgUrl: "https://images.opencollective.com/cloudanswers/fd308c2/logo.png",
+  },
+  {
+    name: "Vasyl",
+    amount: 5,
+    imgUrl: "https://images.opencollective.com/guest-474db553/avatar.png",
+  },
+  {
+    name: "Incognito",
+    amount: 4,
+    imgUrl: "https://images.opencollective.com/user-a9649ada/avatar.png",
+  },
+  {
+    name: "Elwyn",
+    amount: 3,
+    imgUrl: "https://images.opencollective.com/elwyn/b3e9f1e/avatar.png",
+  },
+  {
+    name: "Thinkmill",
+    amount: 3,
+    imgUrl: "https://images.opencollective.com/thinkmill/28910ec/logo.png",
+  },
+];
+---
+
+<section class="root">
+  <div class="backer-section">
+    <h2>Backers</h2>
+    <p>
+      Many thanks to all those who have also supported the project financially!
+    </p>
+
+    <div class="backers">
+      {backers.map((backer) => <BackerCard backer={backer} />)}
+    </div>
+
+    <LinkButton link="https://opencollective.com/npkill">Contribute!</LinkButton
+    >
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-size: 4em;
+    margin-bottom: 5px;
+  }
+
+  .root {
+    width: 100%;
+    background-color: #f13b62;
+    color: white;
+    padding-bottom: 28px;
+
+    background-image: url("/img/dollar.svg");
+    background-size: 80px;
+    background-position: 8px;
+    animation: backgroundAnim 160s linear infinite;
+  }
+
+  .backer-section {
+    text-align: center;
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+  .backers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+
+  @keyframes backgroundAnim {
+    from {
+      background-position: 0px;
+    }
+    to {
+      background-position: 1000px 1000px;
+    }
+  }
+</style>

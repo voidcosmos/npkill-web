@@ -1,0 +1,32 @@
+---
+const { link, filled = true } = Astro.props;
+---
+
+<a href={link} target="_blank" class:list={["button", { filled }]}>
+  <slot />
+</a>
+
+<style>
+  .button {
+    color: black;
+    border: 1px solid gray;
+    cursor: pointer;
+    padding: 7px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.1s;
+  }
+
+  .button:hover {
+    background-color: #dbdbdb;
+  }
+
+  .filled {
+    border: none;
+    background-color: #363636;
+    color: white;
+  }
+  .filled:hover {
+    background-color: #1c1c1c;
+  }
+</style>

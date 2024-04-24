@@ -1,0 +1,88 @@
+---
+import { type Tweet } from "./tweet.interface";
+
+interface Props {
+  profile: Tweet;
+}
+
+const { profile } = Astro.props;
+const { profileImg, name, text, mediaSrc, date, source } = profile;
+---
+
+<a href={source} target="_blank">
+  <div class="card">
+    <div class="header">
+      <img
+        class="profile-image"
+        loading="lazy"
+        src={profileImg}
+        alt={name + "profile image"}
+      />
+      <div>
+        <div>{name}</div>
+        <div class="date">
+          {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <p>{text}</p>
+
+      <div class="media">
+        {mediaSrc && <img src={mediaSrc} loading="lazy" alt="Tweet media" />}
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #797979;
+    padding: 7px;
+    box-sizing: border-box;
+    background-color: #13151ab8;
+  }
+
+  .header {
+    display: flex;
+    gap: 12px;
+    font-size: 0.45em;
+  }
+
+  .date {
+    font-size: 0.8em;
+    opacity: 0.5;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+
+  .body {
+    font-size: 0.5em;
+    line-height: 1.4;
+    white-space: pre-line;
+  }
+
+  .media {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+</style>

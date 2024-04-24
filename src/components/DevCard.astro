@@ -1,0 +1,76 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+interface Link {
+  name: string;
+  icon: string;
+  link: string;
+}
+
+interface Props {
+  image: string;
+  name: string;
+  bio: string;
+  links: Link[];
+}
+
+const { image, name, links = [] } = Astro.props;
+---
+
+<div class="root card">
+  <div class="image-container">
+    <img src={image} alt="Juan image" />
+  </div>
+
+  <div class="info">
+    <div class="name">{name}</div>
+
+    <div class="links">
+      {
+        links.map((link) => (
+          <LinkButton link={link.link}>
+            <i class={"bx " + link.icon} /> {link.name}
+          </LinkButton>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .image-container {
+    width: 128px;
+    height: 128px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .info {
+    display: grid;
+  }
+
+  .links {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import CommunityWall from "../components/community/CommunityWall.astro";
+---
+
+<Layout title="The social wall of npkill.">
+  <main>
+    <CommunityWall />
+
+    <div style="height: 2em;"></div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  section {
+    margin-bottom: 4em;
+  }
+
+  .project-external-links {
+    text-align: center;
+    margin: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

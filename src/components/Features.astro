@@ -1,0 +1,367 @@
+<div class="root">
+  <div class="section speed-section" id="speedSection">
+    <canvas id="backgroundSpeed"></canvas>
+    <div class="content">
+      <div class="speed-content">
+        <div style="flex:2;">
+          <h2>Super Fast 🚀</h2>
+          <p>
+            Npkill looks for node_modules or any other directory at low level
+            and in a distributed way, so it will make almost full use of disk
+            and CPU capacities.
+          </p>
+        </div>
+
+        <div class="bars-container">
+          <div class="bars">
+            <div class="white-bar">
+              <div class="green-bar"></div>
+            </div>
+          </div>
+
+          <div class="bars group2">
+            <div class="white-bar">
+              <div class="green-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section easy-section">
+    <div class="content">
+      <div class="easy-content">
+        <div style="flex: 2;">
+          <h2>Super easy 😎</h2>
+          <p>A, B and C. No weird stories. Intuitive to use.</p>
+        </div>
+
+        <div class="abc-anim-container" style="flex:1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h2 {
+    font-size: 2.6em;
+    margin: 0;
+  }
+
+  .root {
+    transform: rotate(-2deg);
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .section {
+    position: relative;
+  }
+
+  .section p {
+  }
+
+  .speed-section {
+    background-color: #040c24;
+    color: white;
+    flex: 1 !important;
+  }
+
+  .easy-section {
+    background-color: #f13b62;
+    color: white;
+  }
+
+  .easy-content {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: right;
+    gap: 14px;
+  }
+
+  .easy-content p {
+    margin-left: auto;
+  }
+  .easy-section h2 {
+    text-align: right;
+  }
+
+  .speed-content {
+    display: flex;
+    align-items: center;
+    margin: 8em 0;
+    gap: 64px;
+  }
+
+  .bars-container {
+    flex: 1;
+    transform: rotate(-3deg);
+    width: 100%;
+  }
+
+  .bars {
+    height: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: gray;
+    animation: barContainerAnim 1.4s ease-in-out infinite;
+  }
+
+  .white-bar {
+    height: 100%;
+    width: 40%;
+    background-color: white;
+    animation: whiteBarAnim 2s linear infinite;
+  }
+
+  .green-bar {
+    height: 100%;
+    width: 40%;
+    background-color: green;
+    animation: greenBarAnim 2s linear infinite;
+    animation-delay: 0.3s;
+  }
+
+  .group2 {
+    margin-top: 1em;
+  }
+  .group2,
+  .group2 * {
+    animation-delay: -0.9s;
+  }
+
+  .abc-anim-container {
+    background-image: url(/img/abc.svg);
+    background-size: 487px;
+    height: 155px;
+    background-position-x: 0px;
+    background-repeat: repeat-x;
+    animation: abcAnim 44s linear infinite;
+    opacity: 0.5;
+  }
+
+  #backgroundSpeed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  @keyframes abcAnim {
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: -1000px;
+    }
+  }
+
+  @keyframes barContainerAnim {
+    0% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-1px, 1px);
+    }
+    40% {
+      transform: translate(1px, -1px);
+    }
+    60% {
+      transform: translate(-1px, 0px);
+    }
+    80% {
+      transform: translate(1px, 1px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes whiteBarAnim {
+    0% {
+      width: 80%;
+    }
+    10% {
+      width: 70%;
+    }
+    20% {
+      width: 79%;
+    }
+    30% {
+      width: 74%;
+    }
+    40% {
+      width: 78%;
+    }
+    50% {
+      width: 75%;
+    }
+    60% {
+      width: 69%;
+    }
+    70% {
+      width: 72%;
+    }
+    80% {
+      width: 74%;
+    }
+    90% {
+      width: 80%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+
+  @keyframes greenBarAnim {
+    0% {
+      width: 80%;
+    }
+    10% {
+      width: 79%;
+    }
+    20% {
+      width: 64%;
+    }
+    30% {
+      width: 70%;
+    }
+    40% {
+      width: 96%;
+    }
+    50% {
+      width: 94%;
+    }
+    60% {
+      width: 89%;
+    }
+    70% {
+      width: 84%;
+    }
+    80% {
+      width: 79%;
+    }
+    90% {
+      width: 75%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 625px) {
+    h2,
+    .easy-section h2 {
+      font-size: 1.4em;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .root {
+      transform: none;
+      margin: 0;
+    }
+    .speed-content {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .easy-content {
+      flex-direction: column;
+    }
+
+    .bars-container {
+      transform: none;
+    }
+    .abc-anim-container {
+      flex: none !important;
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const speedSection = document.getElementById("speedSection")!;
+  const canvas: HTMLCanvasElement = document.getElementById(
+    "backgroundSpeed",
+  )! as HTMLCanvasElement;
+  const ctx = canvas.getContext("2d")!;
+
+  if (!speedSection) {
+    throw new Error("#speedSection not found");
+  }
+
+  if (!canvas) {
+    throw new Error("#backgroundSpeed canvas not found");
+  }
+
+  if (!ctx) {
+    throw new Error("Error getting ctx of canvas.");
+  }
+
+  // Set canvas dimensions
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Particle class
+  class Particle {
+    private x = 0;
+    private y = 0;
+    private speed = 0;
+    private radius = 0;
+    private color = "white";
+
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.speed = Math.random() * 4 + 1;
+      this.radius = Math.random() * 1 + 1;
+      this.color = "white";
+    }
+
+    update() {
+      this.x -= this.speed;
+      this.y += this.speed * 0.05;
+      if (this.x < 0) {
+        this.x = canvas.width;
+        this.y = Math.random() * canvas.height;
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  const particles: Particle[] = [];
+  const particlesNumber =
+    speedSection.clientWidth * speedSection.clientHeight * 0.0004;
+  console.log({ particlesNumber });
+  for (let i = 0; i < particlesNumber; i++) {
+    particles.push(new Particle());
+  }
+
+  function animate() {
+    ctx.canvas.width = speedSection.clientWidth;
+    ctx.canvas.height = speedSection.clientHeight;
+    particles.forEach((particle) => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  // Start animation
+  animate();
+</script>

@@ -1,0 +1,128 @@
+---
+import TweetCard from "./TweetCard.astro";
+import PostCard from "./PostCard.astro";
+import LinkButton from "../LinkButton.astro";
+import { Tweets } from "./tweets.constants";
+import { type Tweet } from "./tweet.interface";
+import { Posts } from "./web-post.constants";
+import type { WebPost } from "./web-post.interface";
+import { getWeekNumber } from "../../scripts/date.utils";
+import { shuffleArray } from "../../scripts/array.utils";
+
+interface Props {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+
+const haveLimit = !!limit;
+
+const mergedContent = [...Posts, ...Tweets];
+
+const seed: number = (() => {
+  const now = new Date();
+  return now.getFullYear() + getWeekNumber(now);
+})();
+const randomizedContent = shuffleArray(mergedContent, seed);
+
+const contentToShow = limit
+  ? randomizedContent.slice(0, limit)
+  : randomizedContent;
+---
+
+<div class="root">
+  {haveLimit ? <h2>The community speaks</h2> : <h2>The Social Wall</h2>}
+  <div class="randomized-notice">(Order randomized every week)</div>
+
+  {
+    !haveLimit && (
+      <div class="pr-notice">Feel free to open a PR to add more content!</div>
+    )
+  }
+
+  <div class="gallery">
+    {
+      contentToShow.map((content) => (
+        <div class="card-container">
+          {content.hasOwnProperty("profileImg") ? (
+            <TweetCard profile={content as Tweet} />
+          ) : (
+            <PostCard post={content as WebPost} />
+          )}
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    haveLimit && (
+      <div style="margin-top: 2em ">
+        <LinkButton link="/community">Show the full community wall</LinkButton>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .root {
+    text-align: center;
+    font-size: 1.4em;
+    background: #13151a;
+    color: white;
+    --grid-opacity: 0.03;
+    --line-width: 0.03em;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, var(--grid-opacity)) var(--line-width),
+        transparent var(--line-width)
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, var(--grid-opacity)) var(--line-width),
+        transparent var(--line-width)
+      );
+    background-size: 20px 20px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2em;
+  }
+
+  .randomized-notice {
+    opacity: 0.4;
+    font-size: 0.6em;
+    margin-top: -40px;
+    margin-bottom: 2em;
+  }
+
+  .pr-notice {
+    margin-bottom: 2em;
+  }
+
+  .gallery {
+    column-count: 4;
+  }
+
+  .card-container {
+    margin: 32px 12px;
+  }
+  .card-container:first-child() {
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .gallery {
+      column-count: 3;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    .gallery {
+      column-count: 2;
+    }
+  }
+
+  @media only screen and (max-width: 535px) {
+    .gallery {
+      column-count: 1;
+    }
+  }
+</style>

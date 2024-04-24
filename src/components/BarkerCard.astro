@@ -1,0 +1,38 @@
+---
+const { backer } = Astro.props;
+const { name, amount, imgUrl, text = "" } = backer;
+---
+
+<div class="card">
+  <img src={imgUrl} alt={name + " avatar"} />
+  <div class="name">{name}</div>
+  <div>{amount}$</div>
+  <div class="text">{text}</div>
+</div>
+
+<style>
+  img {
+    border-radius: 120px;
+    max-width: 60px;
+  }
+
+  .card {
+    width: 178px;
+    height: 186px;
+    border-radius: 8px;
+    border: 1px solid #e3e3e3;
+    padding: 8px 2px;
+    color: #1f1f1f;
+    background-color: white;
+
+    font-size: 0.8em;
+  }
+  .name {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: 0.6em;
+  }
+</style>

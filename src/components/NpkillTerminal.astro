@@ -1,0 +1,49 @@
+<div class="root">
+  <div class="topbar">
+    <span class="title">npx npkill</span>
+  </div>
+
+  <img src="/img/npkill.gif" alt="Npkill gif demo" style="width: 100%" />
+</div>
+
+<style>
+  .root {
+    display: block;
+    width: 90%;
+    max-width: 910px;
+    max-height: 500px;
+    margin: 0 auto;
+    background-color: #161616;
+    border-radius: 12px;
+    transform: translateY(50px);
+    overflow-x: hidden;
+    position: relative;
+    z-index: 5;
+
+    box-shadow: 0px 3px 18px #f13b62;
+    /*animation: glow 14s infinite;*/
+  }
+
+  .topbar {
+    width: 100%;
+    background: #1f1f1f url("/img/window-btn.svg") no-repeat 0.3em;
+    display: grid;
+    padding: 3px;
+  }
+
+  .topbar .title {
+    font-size: 0.6em;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0px 3px 4px #f13b62;
+    }
+    50% {
+      box-shadow: 0px 3px 18px #f13b62;
+    }
+    to {
+      box-shadow: 0px 3px 4px #f13b62;
+    }
+  }
+</style>

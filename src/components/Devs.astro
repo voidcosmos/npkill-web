@@ -1,0 +1,94 @@
+---
+import DevCard from "./DevCard.astro";
+import LinkButton from "./LinkButton.astro";
+---
+
+<div class="content">
+  <h2>The team</h2>
+
+  <div class="dev-cards">
+    <DevCard
+      image="/img/juan-profile.png"
+      name="Juan Torres"
+      bio="blablabla"
+      links={[
+        {
+          name: "Web",
+          icon: "bx-world",
+          link: "https://imzaldih.com",
+        },
+        {
+          name: "GitHub",
+          icon: "bxl-github",
+          link: "https://github.com/zaldih",
+        },
+        {
+          name: "Twitter",
+          icon: "bxl-twitter",
+          link: "https://x.com/imzaldih",
+        },
+      ]}
+    />
+
+    <DevCard
+      image="/img/nya-profile.jpg"
+      name="Nya García"
+      bio="blablabla"
+      links={[
+        {
+          name: "GitHub",
+          icon: "bxl-github",
+          link: "https://github.com/NyaGarcia",
+        },
+        {
+          name: "Twitter",
+          icon: "bxl-twitter",
+          link: "https://x.com/NyaBlk",
+        },
+      ]}
+    />
+
+    <DevCard
+      image="/img/carlos-profile.jpg"
+      name="Carlos Caballero"
+      bio="blablabla"
+      links={[
+        {
+          name: "Web",
+          icon: "bx-world",
+          link: "https://carloscaballero.io",
+        },
+        {
+          name: "GitHub",
+          icon: "bxl-github",
+          link: "https://github.com/Caballerog",
+        },
+        {
+          name: "Twitter",
+          icon: "bxl-twitter",
+          link: "https://x.com/Carlillo",
+        },
+      ]}
+    />
+  </div>
+
+  <div style="text-align:center; margin-top: 2em">
+    <LinkButton
+      link="https://github.com/voidcosmos/npkill/graphs/contributors"
+      filled={false}>View all contributors</LinkButton
+    >
+  </div>
+</div>
+
+<style>
+  h2 {
+    text-align: center;
+  }
+
+  .dev-cards {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

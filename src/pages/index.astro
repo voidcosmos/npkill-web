@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Devs from "../components/Devs.astro";
+import Notice from "../components/Notice.astro";
+import LinkButton from "../components/LinkButton.astro";
+import NpkillOptions from "../components/NpkillOptions.astro";
+import Backers from "../components/Backers.astro";
+import Features from "../components/Features.astro";
+import CommunityWall from "../components/community/CommunityWall.astro";
+---
+
+<Layout title="NPKILL - Maintain your development workspace clean.">
+  <main>
+    <Hero />
+
+    <div>
+      <section class="content">
+        <h2>What is npkill?</h2>
+        <p>
+          <b>Npkill</b> is a CLI tool that allows you to list all the heavy <b
+            >node_modules</b
+          > that you have scattered around your computer and allows you to delete
+          those you don't need in a very simple and elegant way.
+        </p>
+        <p>
+          You might be surprised how much space <b>node_modules</b> from old projects
+          are silly taking up.
+        </p>
+      </section>
+
+      <section>
+        <Features />
+      </section>
+
+      <section class="content">
+        <h2>How to use</h2>
+        <p>
+          <ul>
+            <li>
+              <b>Step 1</b>: Run <code>npx npkill</code> on your terminal.
+            </li>
+            <li>
+              <b>Step 2</b>: Npkill will start scanning the working directory
+              from where you have executed the command (see below for options to
+              change this). The results will start to be displayed.
+            </li>
+            <li>
+              <b>Step 3</b>: Navigate through the results with <b
+                ><kbd>▲</kbd></b
+              > or <b><kbd>▼</kbd></b> and press <b><kbd>Del</kbd></b> to delete.
+            </li>
+          </ul>
+        </p>
+
+        <div style="margin: 40px 0">
+          <Notice type="warning">
+            Some applications installed on the system (like spotify or discord)
+            need their node_modules directory to work and deleting them may
+            break them. Npkill will highlight them by displaying a ⚠️ to be
+            careful.
+          </Notice>
+        </div>
+
+        <h3>All controls</h3>
+        <ul>
+          <li>
+            For move <b>up</b>: <b><kbd>▲</kbd></b> or <b><kbd>k</kbd></b>.
+          </li>
+          <li>
+            For move <b>down</b>: <b><kbd>▼</kbd></b> or <b><kbd>j</kbd></b>.
+          </li>
+          <li>
+            For scroll <b>one page up</b>: <b><kbd>PgUp</kbd></b>, <b
+              ><kbd>l</kbd></b
+            > or <b><kbd>Ctrl+u</kbd></b>.
+          </li>
+          <li>
+            For scroll <b>one page down</b>: <b><kbd>PgDown</kbd></b>, <b
+              ><kbd>h</kbd></b
+            > or <b><kbd>Ctrl+d</kbd></b>.
+          </li>
+          <li>
+            For go to the <b>first</b> or <b>last</b> result: <b
+              ><kbd>HOME</kbd></b
+            >/<b><kbd>END</kbd></b>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="content">
+        <NpkillOptions />
+      </section>
+
+      <section>
+        <CommunityWall limit={8} />
+      </section>
+    </div>
+
+    <div class="project-external-links">
+      <LinkButton link="https://github.com/voidcosmos/npkill" filled={false}
+        >View on GitHub</LinkButton
+      >
+      <LinkButton link="https://www.npmjs.com/package/npkill" filled={false}
+        >View on NPM</LinkButton
+      >
+    </div>
+
+    <hr />
+    <Devs />
+
+    <Backers />
+
+    <div style="height: 100px"></div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  section {
+    margin-bottom: 4em;
+  }
+
+  .project-external-links {
+    text-align: center;
+    margin: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,160 @@
+<h2>Options</h2>
+<div class="courtine" id="courtine">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Arg</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>-c, --bg-color</td>
+        <td>
+          Change row highlight color. Available: blue, cyan, magenta, white, red
+          and yellow
+        </td>
+        <td>blue</td>
+      </tr>
+      <tr>
+        <td>-d, --directory</td>
+        <td>Set the directory from which to begin searching</td>
+        <td>.</td>
+      </tr>
+      <tr>
+        <td>-D, --delete-all</td>
+        <td>
+          CURRENTLY DISABLED. Automatically delete all node_modules folders that
+          are found.
+        </td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td>-e, --show-errors</td>
+        <td>Show error messages if any</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-E, --exclude</td>
+        <td>
+          Exclude directories from search (directory name list must be inside
+          double quotes "", each directory separated by ',' ) Example: "ignore1,
+          ignore2"
+        </td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td>-f, --full</td>
+        <td>
+          Start searching from the home of the user (example: "/home/user" in
+          linux)
+        </td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-gb</td>
+        <td>Show folders size in Gigabytes instead of Megabytes</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-h, --help, ?</td>
+        <td>Show help</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-nu, --no-check-update</td>
+        <td>Dont check for updates on startup</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-s, --sort</td>
+        <td>
+          Sort results by: <b>size</b>, <b>path</b> or <b>last-mod</b>
+        </td>
+        <td>none</td>
+      </tr>
+      <tr>
+        <td>-t, --target</td>
+        <td>Specify the name of the directories you want to search</td>
+        <td>node_modules</td>
+      </tr>
+      <tr>
+        <td>-x, --exclude-hidden-directories</td>
+        <td> Exclude hidden directories ("dot" directories) from search. </td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>-v, --version</td>
+        <td>Show npkill version</td>
+        <td>false</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <i> In future versions some commands may change </i>
+  </div>
+</div>
+<button class="show-all-btn" id="showAllBtn">Show all</button>
+
+<style>
+  table {
+    width: 100%;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #bdbdbd;
+    border-collapse: collapse;
+    border-radius: 9px;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .courtine {
+    overflow: hidden;
+    max-height: 250px;
+  }
+
+  .show-all-btn {
+    all: unset;
+    padding: 4px;
+    cursor: pointer;
+    color: #f13b62;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+
+<script>
+  const showAllBtn = document.getElementById("showAllBtn");
+  const courtine = document.getElementById("courtine");
+
+  function checkComponents() {
+    if (!showAllBtn) {
+      throw new Error("#showAllBtn not found.");
+    }
+
+    if (!courtine) {
+      throw new Error("#courtine not found.");
+    }
+  }
+
+  function showMore() {
+    if (!showAllBtn || !courtine) {
+      return;
+    }
+    showAllBtn.remove();
+    courtine.classList.remove("courtine");
+  }
+
+  checkComponents();
+  if (showAllBtn) {
+    showAllBtn.addEventListener("click", () => showMore());
+  }
+</script>

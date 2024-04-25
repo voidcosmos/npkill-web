@@ -344,17 +344,21 @@
     }
   }
 
+  const MAX_PARTICLES = 500;
   const particles: Particle[] = [];
-  const particlesNumber =
-    speedSection.clientWidth * speedSection.clientHeight * 0.0004;
+  const particlesNumber = Math.min(
+    MAX_PARTICLES,
+    speedSection.clientWidth * speedSection.clientHeight * 0.0004,
+  );
   console.log({ particlesNumber });
   for (let i = 0; i < particlesNumber; i++) {
     particles.push(new Particle());
   }
 
   function animate() {
-    ctx.canvas.width = speedSection.clientWidth;
-    ctx.canvas.height = speedSection.clientHeight;
+    ctx.canvas.width = (speedSection.clientWidth, 3000);
+    // Limit height for prevent infinite scroll when css fail to load
+    ctx.canvas.height = Math.min(speedSection.clientHeight, 3000);
     particles.forEach((particle) => {
       particle.update();
       particle.draw();

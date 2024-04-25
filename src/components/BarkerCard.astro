@@ -1,10 +1,11 @@
 ---
+import { Image } from "astro:assets";
 const { backer } = Astro.props;
 const { name, amount, imgUrl, text = "" } = backer;
 ---
 
 <div class="card">
-  <img src={imgUrl} alt={name + " avatar"} />
+  <Image src={imgUrl} alt={name + " avatar"} width="60" height="60" />
   <div class="name">{name}</div>
   <div>{amount}$</div>
   <div class="text">{text}</div>

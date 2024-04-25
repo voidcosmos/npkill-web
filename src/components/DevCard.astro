@@ -1,5 +1,6 @@
 ---
 import LinkButton from "./LinkButton.astro";
+import { Image } from "astro:assets";
 
 interface Link {
   name: string;
@@ -19,7 +20,7 @@ const { image, name, links = [] } = Astro.props;
 
 <div class="root card">
   <div class="image-container">
-    <img src={image} alt="Juan image" />
+    <Image src={image} alt={name + " avatar"} width="128" height="128" />
   </div>
 
   <div class="info">

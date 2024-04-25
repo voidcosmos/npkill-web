@@ -1,9 +1,15 @@
+---
+import { Image } from "astro:assets";
+import npkillFooterImg from "../../public/img/npkill-text-outlined.svg";
+---
+
 <footer class="footer">
   <div class="content">
-    <img
+    <Image
       class="npkill-title"
-      src="img/npkill-text-outlined.svg"
+      src={npkillFooterImg}
       alt="npkill text logo"
+      width="500"
     />
     <p>
       <img

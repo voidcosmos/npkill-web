@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  schedule: # Rebuild "Social Wall" section.
+    - cron: '*/2 * * * *' # Test
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment

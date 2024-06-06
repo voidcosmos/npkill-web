@@ -24,11 +24,8 @@
       </tr>
       <tr>
         <td>-D, --delete-all</td>
-        <td>
-          CURRENTLY DISABLED. Automatically delete all node_modules folders that
-          are found.
-        </td>
-        <td>--</td>
+        <td> Automatically delete all node_modules folders that are found. </td>
+        <td>false</td>
       </tr>
       <tr>
         <td>-e, --show-errors</td>
@@ -82,6 +79,13 @@
       <tr>
         <td>-x, --exclude-hidden-directories</td>
         <td> Exclude hidden directories ("dot" directories) from search. </td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>--dry-run</td>
+        <td>
+          It does not delete anything (will simulate it with a random delay).
+        </td>
         <td>false</td>
       </tr>
       <tr>

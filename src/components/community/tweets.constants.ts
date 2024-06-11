@@ -299,6 +299,61 @@ export const Tweets: Tweet[] = [
       "https://pbs.twimg.com/media/EcgtfrqUwAABQ3U?format=jpg&name=small",
     source: "https://twitter.com/snagrawal11/status/1281324945255985152",
   },
+  {
+    name: "Yoav Ganbar",
+    text: "Reminder to run npx npkill every once in a while.\n\nYour hard disk will thank you.",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1403375405332041733/YKzFiS7g_normal.jpg",
+    date: new Date("2024-06-07"),
+    mediaSrc:
+      "https://pbs.twimg.com/media/GPgHb5kXgAASdLA?format=png&name=small",
+    source: "https://x.com/HamatoYogi/status/1799196423189369025",
+  },
+  {
+    name: "Kevin B. Ridgway",
+    text: "node_modules got you down? :) Try this CLI!\n\nnpx npkill\n\nIt goes through a directory of projects and finds all your node_modules directories and allows you to select which one to delete.\n\nThank me later.\n\nI had 21GB of node_modules I could delete!",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1783112828238340096/F47D2_sR_normal.jpg",
+    date: new Date("2024-06-09"),
+    mediaSrc:
+      "https://pbs.twimg.com/media/GPo0Gi1agAAU296?format=png&name=900x900",
+    source: "https://x.com/program247365/status/1799808292065329220",
+  },
+  {
+    name: "https://x.com/hemanthg4/status/1799711313209463212",
+    text: "PSA to run your half yearly clean up. I just recovered ~150 GB on my Mac.\n\n1. docker system prune -a -f --volumes\n2. npx npkill",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1495504398411509760/Kru-OxJc_normal.jpg",
+    date: new Date("2024-06-09"),
+    source: "https://x.com/hemanthg4/status/1799711313209463212",
+  },
+  {
+    name: "https://x.com/wesleycoder/status/1798826832529412239",
+    text: "Yeah... `npkill` saves lives",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1780776232935710720/FkbFotpc_normal.jpg",
+    date: new Date("2024-06-06"),
+    source: "https://x.com/wesleycoder/status/1798826832529412239",
+  },
+  {
+    name: "Zaldih Dev",
+    text: "🚀 New release of #npkill (v0.12.0)\n\nIf you are a developer in the javascript ecosystem you will probably be interested.\n\n👉 Discover whats new in https://imzaldih.com/en/post/npkill-0.12.0/\n\n#nodejs #javascript #WebDevelopment #opensource",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1639260893056753672/eD6xC0Cg_normal.jpg",
+    date: new Date("2024-05-30"),
+    mediaSrc: "https://imzaldih.com/_astro/cover.-Zk8-Hl4.webp",
+    source: "https://x.com/imzaldih/status/1796189602710958580",
+  },
+  {
+    name: "Alex Streza",
+    text: "Just run 'npx npkill'.\n\nThank me later.",
+    profileImg:
+      "https://pbs.twimg.com/profile_images/1665683657971867648/qAofOJp8_normal.jpg",
+    date: new Date("2024-05-06"),
+    mediaSrc:
+      "https://pbs.twimg.com/media/GM4lMEqa4AAu69i?format=jpg&name=small",
+    source: "https://x.com/alex_streza/status/1787406996049993914",
+  },
 ];
 
 /*
